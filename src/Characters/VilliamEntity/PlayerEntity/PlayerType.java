@@ -1,7 +1,12 @@
 package Characters.VilliamEntity.PlayerEntity;
 
 public enum PlayerType {
-    WARRIOR,
-    ALEKSANDR,
-    WIZARD;
+    WARRIOR("Рыцарь"),
+    ALEKSANDR("Александр"),
+    WIZARD("Маг");
+    String description;
+
+    PlayerType(String description) {
+        this.description = description;
+    }
 }

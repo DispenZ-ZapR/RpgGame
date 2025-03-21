@@ -7,9 +7,6 @@ public class Wizard extends EntityStatistic{
         super(40, 70, 60, PlayerType.WIZARD, 3);
 
     }
-    void display() {
-        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
-    }
 
     @Override
     void skill() {

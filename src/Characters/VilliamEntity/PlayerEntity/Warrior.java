@@ -6,9 +6,6 @@ public class Warrior extends EntityStatistic{
     public Warrior(int heatlh, int damage, int stamina, int id) {
         super(60, 60, 60, PlayerType.WARRIOR, 2);
     }
-    void display() {
-        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
-    }
     boolean shield = false;
     
     @Override
