@@ -3,18 +3,24 @@ package Characters.VilliamEntity.PlayerEntity;
 import java.util.Random;
 
 public class Wizard extends EntityStatistic{
-    public Wizard(int heatlh, int damage, int stamina, PlayerType type, int id) {
+    public Wizard(int heatlh, int damage, int stamina, int id) {
         super(40, 70, 60, PlayerType.WIZARD, 3);
 
     }
 
     @Override
-    void skill() {
+    public void skill() {
 
     }
 
     @Override
-    int attack() {
+    public void takeDamage(int damage) {
+        heatlh -= damage;
+        System.out.println("Вы получили урон: " +"-" + damage);
+    }
+
+    @Override
+    public int attack() {
         if (!(stamina < 10)) {
             Random r = new Random();
             int dam = damage + r.nextInt(7);
@@ -24,5 +30,11 @@ public class Wizard extends EntityStatistic{
             System.out.println("Персонаж слишком устал!");
             return 0;
         }
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Класс: Маг");
+        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
     }
 }

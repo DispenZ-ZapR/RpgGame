@@ -9,7 +9,7 @@ public class Warrior extends EntityStatistic{
     boolean shield = false;
     
     @Override
-    void skill() {
+    public void skill() {
         if (stamina > 20) {
             shield = true;
             System.out.println("Вы использовали навык! Щит-блокирует 1 удар врага, снимает -20 выносливости");
@@ -20,7 +20,7 @@ public class Warrior extends EntityStatistic{
     }
 
     @Override
-    int attack() {
+    public int attack() {
         if (!(stamina < 10)) {
             Random r = new Random();
             int dam = damage + r.nextInt(7);
@@ -32,4 +32,20 @@ public class Warrior extends EntityStatistic{
         }
     }
 
+    @Override
+    public void takeDamage(int damage) {
+        if (!shield) {
+            heatlh -= damage;
+            System.out.println("Вы получили урон: " +"-" + damage);
+        }else{
+            System.out.println("Удар заблокирован!");
+            shield = false;
+        }
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Класс: Войн");
+        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
+    }
 }

@@ -6,12 +6,9 @@ public class Aleksandr extends EntityStatistic{
     public Aleksandr(int heatlh, int damage, int stamina, int id) {
         super(100, 100, 100, PlayerType.ALEKSANDR, 1 );
     }
-    void display() {
-        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
-    }
 
     @Override
-    void skill() {
+    public void skill() {
         System.out.println("Вы использовали навык! Уничтожитель-ваш урон увеличивается на +100");
         damage += 100;
     }
@@ -28,5 +25,17 @@ public class Aleksandr extends EntityStatistic{
             return 0;
         }
 
+    }
+
+    @Override
+    public void takeDamage(int damage) {
+        heatlh -= damage;
+        System.out.println("Вы получили урон: " +"-" + damage);
+    }
+
+    @Override
+    public void display() {
+        System.out.println("Класс: Александр");
+        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
     }
 }
