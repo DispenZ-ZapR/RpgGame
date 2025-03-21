@@ -8,9 +8,7 @@ public class Goblin extends VilliamStatistic{
     public Goblin(int heatlh, int damage, int stamina, PlayerType type, int id) {
         super(40, 30, 50, TypeVilliam.GOBLIN, 2);
     }
-    void display() {
-        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
-    }
+
 
     @Override
     int attack() {

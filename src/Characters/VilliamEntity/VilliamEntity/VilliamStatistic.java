@@ -54,6 +54,9 @@ public abstract class VilliamStatistic {
             return false;
         }
     }
+    void display() {
+        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
+    }
 
     public VilliamStatistic(int heatlh, int damage, int stamina, TypeVilliam type, int Id) {
         this.heatlh = heatlh;
