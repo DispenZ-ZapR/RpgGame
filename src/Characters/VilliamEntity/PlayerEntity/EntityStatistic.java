@@ -44,8 +44,9 @@ public abstract class EntityStatistic {
     public void setType(PlayerType type) {
         this.type = type;
     }
-    abstract int attack();
-    abstract void skill();
+
+    public abstract int attack();
+    public abstract void skill();
 
     boolean isAlive(int health){
         if(health > 0){
@@ -54,10 +55,8 @@ public abstract class EntityStatistic {
             return false;
         }
     }
-    public void takeDamage(int damage){
-        heatlh -= damage;
-    }
-    abstract void display();
+    public abstract void takeDamage(int damage);
+    public abstract void display();
 
     protected int stamina;
     protected PlayerType type;
