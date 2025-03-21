@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class DeadWarrior extends VilliamStatistic{
     @Override
-    int attack() {
+    public int attack() {
         if(!(stamina < 10)) {
             Random r = new Random();
             int attackDamage = damage + r.nextInt(7);
@@ -12,13 +12,17 @@ public class DeadWarrior extends VilliamStatistic{
             return attackDamage;
         }else{
             stamina += 7;
-            System.out.println("Рыцарь решил восстановится!");
+            System.out.println("Мертвый Рыцарь решил восстановится!");
             return 0;
         }
     }
 
-    public DeadWarrior(int heatlh, int damage, int stamina, int id) {
-        super(60, 70, 70, TypeVilliam.DEAD_WARRIOR, 1);
+    public DeadWarrior(int heatlh, int damage, int stamina, TypeVilliam deadWarrior, int id) {
+        super(60, 20, 70, TypeVilliam.DEAD_WARRIOR, 1);
     }
 
+    @Override
+    public String display() {
+        return "Мертвый рыцарь, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina;
+    }
 }

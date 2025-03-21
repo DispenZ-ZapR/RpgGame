@@ -16,9 +16,11 @@ public class Aleksandr extends EntityStatistic{
     @Override
     public int attack() {
         if (!(stamina < 40)) {
+            System.out.println("Вы нанесли удар: " + damage);
             Random r = new Random();
             int dam = damage + r.nextInt(7);
             stamina -= 40;
+            System.out.println("Вы нанесли удар: -" + dam);
             return dam;
         }else{
             System.out.println("Персонаж слишком устал!");
@@ -31,6 +33,12 @@ public class Aleksandr extends EntityStatistic{
     public void takeDamage(int damage) {
         heatlh -= damage;
         System.out.println("Вы получили урон: " +"-" + damage);
+    }
+
+    @Override
+    public void Recovery() {
+        System.out.println("Восстановление!!!! +100");
+        stamina += 100;
     }
 
     @Override
