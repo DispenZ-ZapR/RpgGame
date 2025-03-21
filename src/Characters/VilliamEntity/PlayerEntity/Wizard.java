@@ -4,13 +4,21 @@ import java.util.Random;
 
 public class Wizard extends EntityStatistic{
     public Wizard(int heatlh, int damage, int stamina, int id) {
-        super(40, 70, 60, PlayerType.WIZARD, 3);
+        super(40, 27, 60, PlayerType.WIZARD, 3);
 
     }
 
     @Override
-    public void skill() {
+    public void Recovery() {
+        System.out.println("Восстановление! +12");
+        stamina += 12;
+    }
 
+    @Override
+    public void skill() {
+        System.out.println("Вы использовали навык! Усилитель-добавляет +5 здоровья, и прибалвяет +5 силы, тратит -20 выносливости");
+        stamina -= 20;
+        damage += 5;
     }
 
     @Override
@@ -25,6 +33,7 @@ public class Wizard extends EntityStatistic{
             Random r = new Random();
             int dam = damage + r.nextInt(7);
             stamina -= 10;
+            System.out.println("Вы нанесли удар: -" + dam);
             return dam;
         }else{
             System.out.println("Персонаж слишком устал!");

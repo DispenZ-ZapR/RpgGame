@@ -48,16 +48,17 @@ public abstract class EntityStatistic {
     public abstract int attack();
     public abstract void skill();
 
-    boolean isAlive(int health){
-        if(health > 0){
+    public boolean isAlive(){
+        if(heatlh > 0){
             return true;
         }else {
             return false;
         }
     }
+
     public abstract void takeDamage(int damage);
     public abstract void display();
-
+    public abstract void Recovery();
     protected int stamina;
     protected PlayerType type;
 }

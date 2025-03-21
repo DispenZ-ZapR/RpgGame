@@ -4,16 +4,15 @@ import java.util.Random;
 
 public class Warrior extends EntityStatistic{
     public Warrior(int heatlh, int damage, int stamina, int id) {
-        super(60, 60, 60, PlayerType.WARRIOR, 2);
+        super(60, 20, 60, PlayerType.WARRIOR, 2);
     }
-    boolean shield = false;
-    
+    int counter = 0;
     @Override
     public void skill() {
         if (stamina > 20) {
-            shield = true;
-            System.out.println("Вы использовали навык! Щит-блокирует 1 удар врага, снимает -20 выносливости");
+            System.out.println("Вы использовали навык! Щит-блокирует 2 удара врага, снимает -20 выносливости");
             stamina -= 20;
+            counter += 2;
         }else {
             System.out.println("Не достаточно выносливости!");
         }
@@ -25,7 +24,9 @@ public class Warrior extends EntityStatistic{
             Random r = new Random();
             int dam = damage + r.nextInt(7);
             stamina -= 10;
+            System.out.println("Вы нанесли удар: -" + dam);
             return dam;
+
         }else{
             System.out.println("Персонаж слишком устал!");
             return 0;
@@ -34,13 +35,19 @@ public class Warrior extends EntityStatistic{
 
     @Override
     public void takeDamage(int damage) {
-        if (!shield) {
+        if (!(counter > 0)) {
             heatlh -= damage;
             System.out.println("Вы получили урон: " +"-" + damage);
         }else{
-            System.out.println("Удар заблокирован!");
-            shield = false;
+            System.out.println("Удар врага заблокирован!");
+            counter--;
         }
+    }
+
+    @Override
+    public void Recovery() {
+        System.out.println("Восстановление! + 10 выносливости");
+        stamina += 10;
     }
 
     @Override

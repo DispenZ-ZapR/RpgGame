@@ -6,7 +6,7 @@ public abstract class VilliamStatistic {
     protected int stamina;
     protected TypeVilliam type;
     protected int Id;
-    abstract int attack();
+    public abstract int attack();
 
     public int getHeatlh() {
         return heatlh;
@@ -47,16 +47,15 @@ public abstract class VilliamStatistic {
     public void setId(int id) {
         Id = id;
     }
-    boolean isAlive() {
+    public boolean isAlive() {
         if(heatlh>0){
             return true;
         }else {
             return false;
         }
     }
-    void display() {
-        System.out.println("heatlh: " + heatlh + " damage: " + damage + " stamina: " + stamina);
-    }
+    public abstract String display();
+
     public void takeDamage(int damage) {
         heatlh -= damage;
     }
