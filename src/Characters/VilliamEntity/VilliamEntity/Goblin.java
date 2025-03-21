@@ -12,7 +12,7 @@ public class Goblin extends VilliamStatistic{
 
     @Override
     int attack() {
-        if(!(stamina <= 5)) {
+        if(!(stamina < 5)) {
             Random r = new Random();
             int attackDamage = damage + r.nextInt(7);
             stamina -= 5;
