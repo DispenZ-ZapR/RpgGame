@@ -54,6 +54,9 @@ public abstract class EntityStatistic {
             return false;
         }
     }
+    public void takeDamage(int damage){
+        heatlh -= damage;
+    }
 
     protected int stamina;
     protected PlayerType type;
