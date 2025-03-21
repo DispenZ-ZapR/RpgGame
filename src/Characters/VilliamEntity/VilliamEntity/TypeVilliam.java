@@ -1,7 +1,12 @@
 package Characters.VilliamEntity.VilliamEntity;
 
 public enum TypeVilliam {
-    BARBARIAN,
-    GOBLIN,
-    DEAD_WARRIOR;
+    BARBARIAN("Варвар"),
+    GOBLIN("Гоблин"),
+    DEAD_WARRIOR("Нечисть рыцарь");
+    String description;
+
+    TypeVilliam(String description) {
+        this.description = description;
+    }
 }
