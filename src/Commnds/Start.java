@@ -1,7 +1,8 @@
 package Commnds;
 
-import Characters.VilliamEntity.PlayerEntity.*;
-import Characters.VilliamEntity.VilliamEntity.*;
+import Characters.PlayerEntity.*;
+import Characters.VilliamEntity.*;
+import UserData.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,12 @@ public class Start implements Command {
     EntityStatistic player = null;
     VilliamStatistic villiam = null;
     List<VilliamStatistic> villiamStorage = new ArrayList<>();
+
+    @Override
+    public String toString() {
+        return "Start - начать игру";
+    }
+
     @Override
     public void execute() {
         System.out.println("Выберите класс персонажа");
@@ -56,6 +63,7 @@ public class Start implements Command {
                     player.takeDamage(randomVilliam.attack());
                     break;
             }
+
         }
     }
 }
