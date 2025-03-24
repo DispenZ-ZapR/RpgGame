@@ -53,14 +53,20 @@ public class Start implements Command {
                 case 1:
                     randomVilliam.takeDamage(player.attack());
                     player.takeDamage(randomVilliam.attack());
+                    player.isAlive();
+                    randomVilliam.isAlive();
                     break;
                 case 2:
                     player.Recovery();
                     player.takeDamage(randomVilliam.attack());
+                    player.isAlive();
+                    randomVilliam.isAlive();
                     break;
                 case 3:
                     player.skill();
                     player.takeDamage(randomVilliam.attack());
+                    player.isAlive();
+                    randomVilliam.isAlive();
                     break;
             }
 

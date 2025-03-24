@@ -52,6 +52,7 @@ public abstract class EntityStatistic {
         if(heatlh > 0){
             return true;
         }else {
+            System.out.println("Вы пройграли!");
             return false;
         }
     }

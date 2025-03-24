@@ -51,6 +51,7 @@ public abstract class VilliamStatistic {
         if(heatlh>0){
             return true;
         }else {
+            System.out.println("Монстр побежден");
             return false;
         }
     }
