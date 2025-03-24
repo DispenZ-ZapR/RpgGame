@@ -9,6 +9,7 @@ public class Register implements Command {
     Data data;
     User user;
     Scanner scanner = new Scanner(System.in);
+    boolean inLogged = false;
     @Override
     public void execute() {
         System.out.println("Введите имя: ");
