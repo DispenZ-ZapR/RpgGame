@@ -6,8 +6,8 @@ import UserData.User;
 import java.util.Scanner;
 
 public class Register implements Command {
-    Data data;
-    User user;
+    Data data = null;
+    User user = null ;
     Scanner scanner = new Scanner(System.in);
     boolean inLogged = false;
     @Override
