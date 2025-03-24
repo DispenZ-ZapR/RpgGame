@@ -10,6 +10,8 @@ public class Main {
         command.put("help", new Help(command.values()));
         command.put("stop", new Exit());
         command.put("start", new Start());
+        command.put("register", new Register());
+        command.put("exit", new Exit());
         CommandGeneral commandHandler = new CommandGeneral(command);
 
 
