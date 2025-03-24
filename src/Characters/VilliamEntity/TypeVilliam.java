@@ -1,4 +1,4 @@
-package Characters.VilliamEntity.VilliamEntity;
+package Characters.VilliamEntity;
 
 public enum TypeVilliam {
     BARBARIAN("Варвар"),

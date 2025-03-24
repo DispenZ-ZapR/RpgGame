@@ -1,4 +1,4 @@
-package Characters.VilliamEntity.PlayerEntity;
+package Characters.PlayerEntity;
 
 public enum PlayerType {
     WARRIOR("Рыцарь"),
