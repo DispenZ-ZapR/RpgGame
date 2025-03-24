@@ -1,4 +1,4 @@
-package Characters.VilliamEntity.VilliamEntity;
+package Characters.VilliamEntity;
 
 public abstract class VilliamStatistic {
     protected int heatlh;

@@ -1,4 +1,4 @@
-package Characters.VilliamEntity.PlayerEntity;
+package Characters.PlayerEntity;
 
 import java.util.Random;
 
