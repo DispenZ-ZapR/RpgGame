@@ -17,5 +17,15 @@ public class Register implements Command {
         String password = scanner.nextLine();
         user = new User(name, password);
         data.addUser(user);
+        System.out.println("Успешная регистрация!");
+        inLogged = true;
+    }
+    public boolean CheckReg(){
+        return inLogged;
+    }
+
+    @Override
+    public String toString() {
+        return "Register - Регистрация";
     }
 }
