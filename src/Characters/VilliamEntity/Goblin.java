@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Goblin extends VilliamStatistic{
     public Goblin(int heatlh, int damage, int stamina, TypeVilliam type, int id) {
-        super(40, 15, 60, TypeVilliam.GOBLIN, 1);
+        super(100, 30, 50, TypeVilliam.GOBLIN, 1);
     }
 
 

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Wizard extends EntityStatistic{
     public Wizard(int heatlh, int damage, int stamina, int id) {
-        super(40, 27, 60, PlayerType.WIZARD, 3);
+        super(100, 80, 55, PlayerType.WIZARD, 3);
 
     }
 

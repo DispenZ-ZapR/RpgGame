@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Barbarian extends VilliamStatistic {
     public Barbarian(int heatlh, int damage, int stamina, int id) {
-        super(80, 30, 60, TypeVilliam.BARBARIAN, 1);
+        super(100, 75, 60, TypeVilliam.BARBARIAN, 1);
     }
 
     @Override
