@@ -3,7 +3,8 @@ package Characters.PlayerEntity;
 public enum PlayerType {
     WARRIOR("Рыцарь"),
     ALEKSANDR("Александр"),
-    WIZARD("Маг");
+    WIZARD("Маг"),
+    STEVE("Стив из Майнкрафта");
     String description;
 
     PlayerType(String description) {
