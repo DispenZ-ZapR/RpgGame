@@ -7,6 +7,9 @@ public class Barbarian extends VilliamStatistic {
         super(100, 75, 60, TypeVilliam.BARBARIAN, 1);
     }
 
+    public Barbarian() {
+    }
+
     @Override
     public int attack() {
         if (!(stamina < 10)) {

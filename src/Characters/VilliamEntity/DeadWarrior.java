@@ -17,6 +17,9 @@ public class DeadWarrior extends VilliamStatistic{
         }
     }
 
+    public DeadWarrior() {
+    }
+
     public DeadWarrior(int heatlh, int damage, int stamina, TypeVilliam deadWarrior, int id) {
         super(100, 70, 70, TypeVilliam.DEAD_WARRIOR, 1);
     }

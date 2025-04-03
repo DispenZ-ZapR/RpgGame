@@ -18,6 +18,9 @@ public class Warrior extends EntityStatistic{
         }
     }
 
+    public Warrior() {
+    }
+
     @Override
     public int attack() {
         if (!(stamina < 10)) {

@@ -11,6 +11,9 @@ public abstract class EntityStatistic {
         this.id = id;
     }
 
+    public EntityStatistic() {
+    }
+
     protected int damage;
 
     public int getStamina() {

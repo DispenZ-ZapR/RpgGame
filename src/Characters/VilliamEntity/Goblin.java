@@ -7,6 +7,8 @@ public class Goblin extends VilliamStatistic{
         super(100, 30, 50, TypeVilliam.GOBLIN, 1);
     }
 
+    public Goblin() {
+    }
 
     @Override
     public int attack() {

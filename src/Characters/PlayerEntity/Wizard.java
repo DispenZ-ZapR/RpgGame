@@ -14,6 +14,10 @@ public class Wizard extends EntityStatistic{
         stamina += 12;
     }
 
+    public Wizard() {
+
+    }
+
     @Override
     public void skill() {
         System.out.println("Вы использовали навык! Усилитель-добавляет +5 здоровья, и прибалвяет +5 силы, тратит -20 выносливости");

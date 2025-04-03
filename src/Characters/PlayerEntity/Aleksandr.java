@@ -13,6 +13,9 @@ public class Aleksandr extends EntityStatistic{
         damage += 100;
     }
 
+    public Aleksandr() {
+    }
+
     @Override
     public int attack() {
         if (!(stamina < 40)) {

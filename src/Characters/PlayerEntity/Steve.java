@@ -41,6 +41,9 @@ public class Steve extends EntityStatistic{
         System.out.println("Health: "+ heatlh + "Damage: "+ damage + "Stamina: "+ stamina);
     }
 
+    public Steve() {
+    }
+
     @Override
     public void Recovery() {
         stamina += 25;
