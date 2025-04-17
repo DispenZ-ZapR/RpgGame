@@ -17,7 +17,6 @@ public class Register implements Command {
         System.out.println("Введите пароль");
         String password = scanner.nextLine();
         user = new User(name, password);
-        data = new Data();
         data.addUser(user);
         System.out.println("Успешная регистрация!");
         inLogged = true;
