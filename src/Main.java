@@ -8,7 +8,6 @@ public class Main {
 
         Map<String, Command> command = new HashMap<>();
         command.put("help", new Help(command.values()));
-        command.put("stop", new Exit());
         command.put("start", new Start());
         command.put("register", new Register());
         command.put("exit", new Exit());
