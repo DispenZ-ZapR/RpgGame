@@ -4,16 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Data {
-    List<User> users = new ArrayList<User>();
+  private static Data instance;
+  List<User> users;
 
+    private Data() {
+        users = new ArrayList<>();
+    }
+    public static Data getInstance() {
+        if (instance == null) {
+            instance = new Data();
+        }
+        return instance;
+    }
     public List<User> getUsers() {
         return users;
-    }
-
-    public void setUsers(List<User> users) {
-        this.users = users;
     }
     public void addUser(User user) {
         users.add(user);
     }
+
 }
