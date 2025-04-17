@@ -18,17 +18,17 @@ public class Steve extends EntityStatistic{
     @Override
     public void skill() {
         if (stamina > 25) {
-            System.out.println("Навык: Поглощение-пошлощает 20% урона");
+            defense = true;
+            System.out.println("Навык: Поглощение-поглощает 20% урона");
             stamina -= 25;
         }else {
-
             System.out.println("Не достаточно выносливости");
         }
     }
 
     @Override
     public void takeDamage(int damage) {
-        if (!defense) {
+        if (defense) {
             heatlh -= (20/ 100) * damage;
         }else {
             heatlh -= damage;
