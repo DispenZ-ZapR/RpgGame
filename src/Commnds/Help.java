@@ -14,4 +14,9 @@ public class Help implements Command {
             System.out.println(l);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Help-вывод всех команд";
+    }
 }
