@@ -17,7 +17,5 @@ public class RpgGameApplication {
             String userCommand = scanner.nextLine();
             commandHandler.commandExecuted(userCommand);
         }
-
-
     }
 }
