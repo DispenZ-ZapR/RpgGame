@@ -6,6 +6,15 @@ import java.util.List;
 public class Data {
   private static Data instance;
   List<User> users;
+  private User currentUserName;
+
+    public User getCurrentUserName() {
+        return currentUserName;
+    }
+
+    public void setCurrentUserName(User currentUserName) {
+        this.currentUserName = currentUserName;
+    }
 
     private Data() {
         users = new ArrayList<>();
