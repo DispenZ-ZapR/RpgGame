@@ -3,7 +3,7 @@ package Characters.PlayerEntity;
 public abstract class EntityStatistic {
     protected int heatlh;
     protected int id;
-    public EntityStatistic(int heatlh, int damage, int stamina, PlayerType type, int id) {
+    public EntityStatistic(int heatlh, int damage, int stamina, PlayerType type) {
         this.heatlh = heatlh;
         this.damage = damage;
         this.stamina = stamina;
@@ -55,7 +55,6 @@ public abstract class EntityStatistic {
         if(heatlh > 0){
             return true;
         }else {
-            System.out.println("Вы пройграли!");
             return false;
         }
     }

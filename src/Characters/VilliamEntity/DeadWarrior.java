@@ -18,14 +18,15 @@ public class DeadWarrior extends VilliamStatistic{
     }
 
     public DeadWarrior() {
+        super(100,70,70,TypeVilliam.DEAD_WARRIOR);
     }
 
     public DeadWarrior(int heatlh, int damage, int stamina, TypeVilliam deadWarrior, int id) {
-        super(100, 70, 70, TypeVilliam.DEAD_WARRIOR, 1);
+        super(100, 70, 70, TypeVilliam.DEAD_WARRIOR);
     }
 
     @Override
-    public String display() {
-        return "Мертвый рыцарь, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina;
+    public void display() {
+        System.out.println( "Мертвый рыцарь, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina);
     }
 }

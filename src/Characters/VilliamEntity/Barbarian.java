@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class Barbarian extends VilliamStatistic {
     public Barbarian(int heatlh, int damage, int stamina, int id) {
-        super(100, 75, 60, TypeVilliam.BARBARIAN, 1);
+        super(100, 75, 60, TypeVilliam.BARBARIAN);
     }
 
     public Barbarian() {
+        super(100, 75, 60, TypeVilliam.BARBARIAN);
     }
 
     @Override
@@ -25,8 +26,9 @@ public class Barbarian extends VilliamStatistic {
     }
 
     @Override
-    public String display() {
-        return "Варвар, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina;
+    public void display() {
+
+        System.out.println("Варвар "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina);
     }
 }
 
