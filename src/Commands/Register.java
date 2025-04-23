@@ -6,7 +6,7 @@ import UserData.User;
 import java.util.Scanner;
 
 public class Register implements Command {
-    Data data = null;
+    Data data = Data.getInstance();
     User user = null ;
     Scanner scanner = new Scanner(System.in);
     boolean inLogged = false;
@@ -18,8 +18,8 @@ public class Register implements Command {
         String password = scanner.nextLine();
         user = new User(name, password);
         data.addUser(user);
+        data.setCurrentUserName(user);
         System.out.println("Успешная регистрация!");
-        inLogged = true;
     }
     public boolean CheckReg(){
         return inLogged;

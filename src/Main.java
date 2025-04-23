@@ -1,4 +1,4 @@
-import Commnds.*;
+import Commands.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,7 @@ public class Main {
 
         Map<String, Command> command = new HashMap<>();
         command.put("help", new Help(command.values()));
-        command.put("start", new Start());
+        command.put("start", new accountStatusCheck());
         command.put("register", new Register());
         command.put("exit", new Exit());
         CommandGeneral commandHandler = new CommandGeneral(command);
