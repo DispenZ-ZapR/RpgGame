@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Aleksandr extends EntityStatistic{
     public Aleksandr(int heatlh, int damage, int stamina, int id) {
-        super(100, 100, 100, PlayerType.ALEKSANDR, 1 );
+        super(100, 100, 100, PlayerType.ALEKSANDR );
     }
 
     @Override
@@ -14,6 +14,7 @@ public class Aleksandr extends EntityStatistic{
     }
 
     public Aleksandr() {
+        super(100, 100, 100, PlayerType.WARRIOR);
     }
 
     @Override

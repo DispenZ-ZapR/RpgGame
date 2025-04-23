@@ -42,6 +42,7 @@ public class Steve extends EntityStatistic{
     }
 
     public Steve() {
+        super(100, 45, 75, PlayerType.WARRIOR);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class Steve extends EntityStatistic{
     }
 
     public Steve(int heatlh, int damage, int stamina, int id) {
-        super(100,45,75,PlayerType.STEVE,4);
+        super(100,45,75,PlayerType.STEVE);
 
     }
 }
