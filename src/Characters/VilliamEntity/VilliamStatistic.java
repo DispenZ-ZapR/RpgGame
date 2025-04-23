@@ -57,12 +57,12 @@ public abstract class VilliamStatistic {
             return false;
         }
     }
-    public abstract String display();
+    public abstract void display();
 
     public void takeDamage(int damage) {
         heatlh -= damage;
     }
-    public VilliamStatistic(int heatlh, int damage, int stamina, TypeVilliam type, int Id) {
+    public VilliamStatistic(int heatlh, int damage, int stamina, TypeVilliam type) {
         this.heatlh = heatlh;
         this.damage = damage;
         this.stamina = stamina;
