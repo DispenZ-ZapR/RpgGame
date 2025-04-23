@@ -1,4 +1,4 @@
-package Commnds;
+package Commands;
 
 import UserData.Data;
 import UserData.User;

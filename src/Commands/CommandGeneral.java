@@ -1,4 +1,4 @@
-package Commnds;
+package Commands;
 
 import java.util.Map;
 
@@ -10,8 +10,9 @@ public class CommandGeneral {
     }
 
     public void commandExecuted(String userCommand){
-        if(commandsSystem.containsKey(userCommand)){
-            Command command = commandsSystem.get(userCommand);
+        String commandName = userCommand.toLowerCase();
+        if(commandsSystem.containsKey(commandName)){
+            Command command = commandsSystem.get(commandName);
             command.execute();
         }else {
             System.out.println("Command not found");
