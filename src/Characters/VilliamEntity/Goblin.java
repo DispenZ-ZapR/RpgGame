@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Goblin extends VilliamStatistic{
     public Goblin(int heatlh, int damage, int stamina, TypeVilliam type, int id) {
-        super(100, 30, 50, TypeVilliam.GOBLIN, 1);
+        super(100, 30, 50, TypeVilliam.GOBLIN);
     }
 
     public Goblin() {
@@ -25,7 +25,7 @@ public class Goblin extends VilliamStatistic{
     }
 
     @Override
-    public String display() {
-        return "Гоблин, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina;
+    public void display() {
+        System.out.println( "Гоблин, "+" health: "+ heatlh+" damage: "+ damage+" stamina: "+ stamina );
     }
 }

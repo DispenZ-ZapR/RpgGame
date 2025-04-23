@@ -1,4 +1,4 @@
-package Commnds;
+package Commands;
 
 public class Exit implements Command {
     @Override
