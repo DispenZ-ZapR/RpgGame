@@ -8,6 +8,11 @@ import java.util.Map;
 
 public class accountStatusCheck implements Command {
     @Override
+    public String toString() {
+        return "Start-начать игру";
+    }
+
+    @Override
     public void execute() {
         Map<String, Command> command = new HashMap<>();
         command.put("start", new Start());
